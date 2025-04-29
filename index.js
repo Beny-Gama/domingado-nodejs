@@ -3,14 +3,12 @@ const server = express();
 
 server.use(express.json());
 
-
 let customers = [
     { id: 1, name: "Dev Samurai", site: "http://devsamurai.com.br" },
     { id: 2, name: "Google", site: "http://google.com" },
     { id: 3, name: "UOL", site: "http://uol.com.br" },
 ];
 
-// Corrigido aqui: '/customers'
 server.get('/customers', (req, res) => {
     return res.json(customers);
 });
@@ -34,14 +32,14 @@ server.delete('/customers/:id', (req, res) => {
     const index = customers.findIndex(item => item.id === id);
     const status = index >= 0 ? 200 : 404;
 
+    console.debug('GET :: /customers/:id', customers)
+
     if (index >= 0) {
         customers.splice(index, 1)
-    }
-    
+    };
     return res.status(status).json()
-
 });
-
+ 
 const port = 3000
 server.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
