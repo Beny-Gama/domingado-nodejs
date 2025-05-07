@@ -1,10 +1,12 @@
-const app = require('./app')
+const { Router } = require('express');
+const routes = new Router();
 
-new app.listen(3000)
+const customers = require('./app/controllers/CustomersController')
 
+routes.get('/customers', customers.index)
+routes.get('/customers/:id', customers.show)
+routes.post('/customers', customers.create)
+routes.put('/customers:id', customers.update)
+routes.delete('/customers', customers.destroy)
 
-
-// const app = require('./app')
-
-// new app.listen(3000)
-
+module.exports = routes;
