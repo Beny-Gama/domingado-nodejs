@@ -13,6 +13,7 @@
     "repository": "https://github.com/Beny-Gama/domingado-nodejs.git",
     "author": "Bernardo Gama <76955720+Beny-Gama@users.noreply.github.com>",
     "devDependencies": {
+        "eslint": "^9.26.0",
         "sucrase": "^3.35.0"
     }
 }
