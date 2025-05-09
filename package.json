@@ -13,7 +13,11 @@
     "repository": "https://github.com/Beny-Gama/domingado-nodejs.git",
     "author": "Bernardo Gama <76955720+Beny-Gama@users.noreply.github.com>",
     "devDependencies": {
+        "@eslint/js": "^9.26.0",
         "eslint": "^9.26.0",
+        "eslint-plugin-import": "2.31.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "globals": "^16.1.0",
         "sucrase": "^3.35.0"
     }
 }
