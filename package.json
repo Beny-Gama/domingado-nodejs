@@ -1,23 +1,31 @@
 {
     "name": "dominando-nodejs",
     "version": "1.0.0",
+    "type": "module",
     "main": "index.js",
     "license": "MIT",
     "dependencies": {
         "express": "^5.1.0",
-        "nodemon": "^3.1.10"
+        "nodemon": "^3.1.10",
+        "sequelize": "^6.37.7"
     },
     "scripts": {
-        "dev": "nodemon ./src/server.js"
+        "dev": "nodemon ./src/server.js",
+        "lint": "eslint src --ext .js",
+        "lint:fix": "eslint src --ext .js --fix"
     },
     "repository": "https://github.com/Beny-Gama/domingado-nodejs.git",
     "author": "Bernardo Gama <76955720+Beny-Gama@users.noreply.github.com>",
     "devDependencies": {
         "@eslint/js": "^9.26.0",
-        "eslint": "^9.26.0",
-        "eslint-plugin-import": "2.31.0",
-        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint": "^9.27.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^10.1.5",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-prettier": "^5.4.0",
         "globals": "^16.1.0",
+        "prettier": "^3.5.3",
+        "sequelize-cli": "^6.6.3",
         "sucrase": "^3.35.0"
     }
 }
